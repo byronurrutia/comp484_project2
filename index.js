@@ -17,7 +17,6 @@ $(function () {
 // Add a variable "pet_info" equal to a object with the name (string), weight (number), and happiness (number) of your pet
 var pet_info = { name: "Cat", weight: "9", happiness: "60", rest: "3" };
 var animationReset;
-var catAudio = document.getElementsByClassName("cat-audio");
 const catIdleAnimation = [
   "./assets/catidle1.gif",
   "./assets/catidle2.gif",
