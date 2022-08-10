@@ -50,7 +50,10 @@ const catSleepSfx = [
 
 function clickedTreatButton() {
   clearTimeout(animationReset);
-  $(".pet-image").attr("src", catCleanAnimation[Math.floor(Math.random() * 2)]);
+  $(".pet-image").attr(
+    "src",
+    catCleanAnimation[Math.floor(Math.random() * catCleanAnimation.length)]
+  );
   $(".cat-vfx").trigger("pause");
   $(".cat-vfx").attr(
     "src",
@@ -88,7 +91,9 @@ function clickedExerciseButton() {
   clearTimeout(animationReset);
   $(".pet-image").attr(
     "src",
-    catMovementAnimation[Math.floor(Math.random() * 2)]
+    catMovementAnimation[
+      Math.floor(Math.random() * catMovementAnimation.length)
+    ]
   );
   $(".cat-vfx").trigger("pause");
   $(".cat-vfx").attr(
@@ -129,7 +134,7 @@ function checkAndUpdatePetInfoInHtml() {
   animationReset = setTimeout(() => {
     $(".pet-image").attr(
       "src",
-      catIdleAnimation[Math.floor(Math.random() * 2)]
+      catIdleAnimation[Math.floor(Math.random() * catIdleAnimation.length)]
     );
   }, "6000");
 }
