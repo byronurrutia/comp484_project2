@@ -27,3 +27,7 @@
 .card {
   margin: 0 auto;
 }
+
+.status {
+  color: red;
+}

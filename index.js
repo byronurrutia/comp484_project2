@@ -118,7 +118,7 @@ function clickedSleepButton() {
     catSleepSfx[Math.floor(Math.random() * catSleepSfx.length)]
   );
   $(".cat-vfx").trigger("play");
-  $(".status").text("+1 rest, +1 happiness, -1 weight");
+  $(".status").text("-1 weight, +1 happiness, +1 rest");
 
   pet_info.rest++;
   pet_info.happiness++;
