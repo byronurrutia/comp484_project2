@@ -135,6 +135,7 @@ function checkAndUpdatePetInfoInHtml() {
       "src",
       catIdleAnimation[Math.floor(Math.random() * catIdleAnimation.length)]
     );
+    $(".status").text("");
   }, "6000");
 }
 
