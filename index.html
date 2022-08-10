@@ -5,45 +5,212 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <!-- CSS only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
     <script src="index.js" defer></script>
-    <title>Document</title>
+    <title>Virtual Pet Cat</title>
   </head>
-  <body>
+  <body class="bg-img">
     <header>
-      <h1>Virtual Cat</h1>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand " href="#">Virtual Pet Cat</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" target="_blank" href="https://github.com/byronurrutia/comp484_project2" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg> GitHub Repo</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                  <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                  <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"/>
+                </svg>
+                   Asset Links
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://elthen.itch.io/2d-pixel-art-cat-sprites" target="_blank">Cat Sprites</a></li>
+                  
+                  <li><a class="dropdown-item" href="https://gifer.com/en/PAq" target="_blank">Backround</a></li>
+                </ul>
+                <li class="nav-item">
+                  <input
+                    type="range"
+                    class="form-range"
+                    min="0"
+                    max="5"
+                    step="0.5"
+                    id="customRange3"
+                  />
+                </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-      <audio class="cat-vfx" src="./audio/meow2.ogg">
-        <!-- <source class="cat-audio"  type="audio/ogg" /> -->
-      </audio>
-      <section class="pet-image-container">
-        <!-- Replace pet image with your own pet image -->
-        <img class="pet-image" src="./assets/catpaw.gif" />
-      </section>
-      <section class="dashboard">
-        <div>
-          Name: <strong><span class="name"></span></strong>
+      <div class="container">
+        <div class="row img-row justify-content-center">
+          <div class="col-md-4">
+            <div class="card mb-3 border-dark text-center">
+              <img
+                src="./assets/catpaw.gif"
+                class="card-img-top pet-image"
+                alt="..."
+              />
+              <div class="card-header">
+                <h5 class="card-title">
+                  Name: <strong><span class="name"></span></strong>
+                </h5>
+                <h6>Status:</h6>
+                <span class="status"></span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          Weight: <strong><span class="weight"></span> pounds</strong>
+
+        <div class="row info-row justify-content-center">
+          <div class="col-md-8">
+            <div class="card-group">
+              <div class="card text-bg-light mb-3" style="max-width: 18rem">
+                <div class="card-header">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-file-arrow-down-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8 5a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5A.5.5 0 0 1 8 5z"
+                    />
+                  </svg>
+                  Weight:
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <strong><span class="weight"></span> lb</strong>
+                  </h5>
+                </div>
+              </div>
+              <div class="card text-bg-light mb-3" style="max-width: 18rem">
+                <div class="card-header">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>
+                  Happiness:
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <strong
+                      ><span class="happiness"></span> tail-wags/min</strong
+                    >
+                  </h5>
+                </div>
+              </div>
+              <div class="card text-bg-light mb-3" style="max-width: 18rem">
+                <div class="card-header">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-moon-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                    />
+                  </svg>
+                  Rest:
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <strong><span class="rest"></span> hrs</strong>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          Happiness:
-          <strong><span class="happiness"></span> tail wags (per min)</strong>
+
+        <div class="row button-row justify-content-center">
+          <div class="d-flex justify-content-center">
+            <div class="d-grid gap-2 d-md-block">
+              <button type="button" class="btn treat-button btn-primary btn-lg">
+                Treat
+              </button>
+              <button
+                type="button"
+                class="btn exercise-button btn-primary btn-lg"
+              >
+                Exercise
+              </button>
+
+              <button type="button" class="btn play-button btn-primary btn-lg">
+                Play
+              </button>
+
+              <button type="button" class="btn sleep-button btn-primary btn-lg">
+                Sleep
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="button-container">
-          <button class="treat-button">Treat</button>
-          <button class="play-button">Play</button>
-          <button class="exercise-button">Exercise</button>
-        </div>
-      </section>
+      </div>
+
+      <audio class="cat-vfx" src="./audio/meow2.ogg"></audio>
     </main>
 
     <!-- Your web-app is https, so your scripts need to be too -->
     <script
       src="https://code.jquery.com/jquery-2.2.1.min.js"
       integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+      crossorigin="anonymous"
+    ></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
   </body>
