@@ -106,6 +106,7 @@ function clickedExerciseButton() {
 }
 
 function clickedSleepButton() {
+  clearTimeout(animationReset);
   $(".pet-image").attr("src", "./assets/catsleep.gif");
   $(".cat-vfx").trigger("pause");
   $(".cat-vfx").attr(
